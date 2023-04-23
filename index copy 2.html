@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&famille=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sneacker | Ventes de basket</title>
+ 
+</head>
+<body class="font-['Kumbh_Sans'] ">
+  <!-- Responsive desktop -->
+
+  <nav class="relative px-4 py-4 flex  items-center bg-white container mx-auto flex justify-between items-center align-center mt-2 max-w-6xl px-12 ">
+  <div class="flex flex-row-reverse ">
+      <a class="text-3xl font-bold leading-none" href="#">
+        <p class="font-bold font-['Arial'] text-2xl md:ml-8 sm:mt-1 ">sneakers</p>
+      </a>
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-orange-500 p-3">
+          <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+  </div>
+    <ul
+      class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+      <li><a class="text-sm text-gray-400 hover:text-orange-500 hover:font-bold" href="#">Collections</a></li>
+      
+      <li><a class="text-sm text-gray-400 hover:text-orange-500 hover:font-bold " href="#">Hommes</a></li>
+  
+      <li><a class="text-sm text-gray-400 hover:text-orange-500 hover:font-bold" href="#">Femmes</a></li>
+   
+      <li><a class="text-sm text-gray-400 hover:text-orange-500 hover:font-bold" href="#">A propos de</a></li>
+    
+      <li><a class="text-sm text-gray-400 hover:text-orange-500 hover:font-bold" href="#">Contacter</a></li>
+    </ul>
+    <!-- Panier sur la navigation -->
+     <div class="flex items-center justify-center align-center space-x-4 ">
+  <span class="rounded-full bg-orange-500 w-6 h-6 text-center font-bold text-slate-100 pt-[0.8px] absolute -mt-6 mr-8 text-white" id="quantity_only">0</span>
+      <img src="./images/icon-cart.svg" alt="basket" class="w-6 h-6 " id="img_Basket">
+      <img src="./images/image-avatar.png" alt="profil de l'acheteur" class="w-12 hover:border-4 border-orange-500 rounded-full  ">
+    </div>
+  </nav>
+  <div class="navbar-menu relative z-50 hidden ">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+      <div class="flex items-center mb-8">
+        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+        </a>
+        <button class="navbar-close ">
+          <svg class="h-6 w-6 text-orange-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <ul class="text-center">
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-orange-500 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Home</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-orange-500 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">About Us</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-orange-500 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Services</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-orange-500 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Pricing</a>
+          </li>
+          <li class="mb-1">
+            <a class="block p-4 text-sm font-semibold text-orange-500 hover:bg-blue-50 hover:text-blue-600 rounded"
+              href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+  
+    </nav>
+  </div>
+
+  <!-- Card affichage de panier -->
+  <div class="card_basket flex justify-end container mx-auto max-w-6xl invisible" id="card_basket">
+    <div class="box px-2 bg-slate-50 rounded-xl h-[160px] w-56 absolute  mr-28 shadow-xl drop-shadow-md">
+      <div id="div_global">
+        <p class="font-bold mt-2 ml-2">Cart</p>
+        <!-- Creer un divider panier-->
+        <div class="w-full mx-auto bg-slate-300 h-[1px]  mt-4 "></div>
+   <p class="text-center text-slate-500 mt-2 " id='basket_Empty'>Votre panier est vide</p>
+      </div>
+    </div>
+  </div>
+<!-- Bloc entier img et description -->
+  <div class="cursor-pointer flex flex-col  md:flex-row md:content-center mx-auto container lg:mt-12 lg:mb-12 md:mt-24 sm:mt-[32px] space-x-6 max-w-5xl xxl:max-w-3xl lg:px-12 sm:flex-col md:flex-row sm:items-center">
+    <div >
+        <!-- Carrousel img -->
+<div>
+<div class="box_images">
+  <div class="">
+    <div class="arrow flex justify-between flex-row-reverse relative ">
+     <div class="flex absolute justify-between w-full flex-row-reverse px-4">
+       <i
+        class="btn-right fa-solid fa-circle-arrow-right mt-52 - text-3xl text-slate-200  cursor-pointer z-18  "></i>
+        <i
+        class="btn-right fa-solid fa-circle-arrow-left mt-52 text-3xl text-slate-200   cursor-pointer z-18  "></i>
+     </div>
+      <!-- <i class="btn-left fa-solid fa-circle-arrow-left  text-3xl text-slate-200  px-4 cursor-pointer bg-red-900 z-18 absolute"></i> -->
+      <img src="/images/image-product-1.jpg" class="active img_slider rounded-xl w-[100vh] block"
+        alt="product sneaker" id="img_slider">
+     
+    </div>
+  </div>
+  <!-- img dans les blocs-->
+  <div class="relative mt-4 flex  space-x-2 justify-between relative ">
+    <img src="/images/image-product-1.jpg" class="img_block rounded-xl sm:w-[102px] w-[89px]" alt="">
+    <img src="/images/image-product-2.jpg" class="img_block rounded-xl sm:w-[102px] w-[89px]" alt="">
+    <img src="/images/image-product-3.jpg" class="img_block rounded-xl sm:w-[102px] w-[89px]" alt="">
+    <img src="/images/image-product-4.jpg" class="img_block rounded-xl sm:w-[102px] w-[89px]" alt="">
+  </div>
+  </div>
+</div>
+    </div>
+    <!-- Bloc d'information du produit -->
+  
+    <div class=" max-w-md max-h-lg text-xl sm:mt-[34px]  text-center md:text-left md:mt-18 sm:mb-24 lg:text-left selection:bg-orange-300 selection:text-orange-900 px-5 sm:px-0 ">
+      <h5 class="text-orange-500 font-bold text-[12px] mt-8 md:mt-0">SNEAKER COMPANY</h5>
+      <h6 class="font-bold space-y-2 text-4xl lg:my-4">
+        Fall Limited Edition Sneakers
+      </h6>
+      <p class="w-76 text-sm text-slate-500 font-['Kumbh_Sans'] ">
+      Ces baskets à profil bas sont votre compagnon idéal pour les vêtements décontractés. Dotées d'une semelle extérieure en
+      caoutchouc durable, elles résisteront à tout ce que le temps peut offrir.
+      </p>
+     <div class="flex flex justify-between items-center align-center ">
+     <div class="flex space-x-2 my-1">
+      <h4 class="font-bold">$125,00</h4>
+      <span class=" text-[11px] bg-orange-200 rounded-sm text-orange-500 font-bold text-center text-sm py-1 pl-1 w-8 h-4 flex align-center items-center mt-[6px] text-center ">50%</span>
+     </div> 
+     <p class="line-through text-slate-400">$250,00</p>
+     </div>
+     <div class="flex justify-between items-center align-center sm:flex-row flex-col space-y-2 content-center">
+       <!-- input + ou - -->
+      <div class="flex space-x-8 content-center justify-between items-center ">
+        <div class="container w-auto ">
+          <div class="vertical-center">
+            <div class="custom-number-input h-10 w-58">
+              
+              <div class="flex flex-row h-10 w-52  rounded-lg relative bg-transparent mt-1">
+                <button data-action="decrement"
+                  class=" bg-gray-200 text-orange-500 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                  <span class="m-auto text-2xl font-bold" id="less">−</span>
+                </button>
+                <input  type="number" readonly
+                  class="outline-none focus:outline-none text-center w-full bg-gray-200 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                  name="custom-input-number" value="0" id="quantity">
+                <button data-action="increment"
+                  class="bg-gray-200 text-orange-500 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                  <span class="m-auto text-2xl font-bold" id="plus">+</span>
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  <form class="" id="send_Basket">
+      <button id='add_Sneaker' class="bg-orange-500 w-56  rounded-md  font-bold text-center text-sm  flex justify-center items-center h-10 text-white content-center ">
+          <img src="./images/icon-cart-white.svg" alt="" class="w-4 h-4 text-white mx-2">
+       Ajouter au panier
+      </button>
+    </form>
+     </div>
+    </div>
+    </div>
+
+ 
+
+<script src="script.js"></script>
+</body>
+</html>

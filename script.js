@@ -157,9 +157,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-
-img_blocks.forEach((img) => {
+//Creer une Carrousel
+const img_slider_main = document.querySelectorAll(".img_slider_main");
+const little_img = document.querySelectorAll(".little_img");
+little_img.forEach((img) => {
   img.addEventListener("click", (e) => {
-    items[0].setAttribute("src", e.target.getAttribute("src"));
+    console.log(e.target.getAttribute("src").slice(0, 23) + ".jpg");
+    img_slider_main.forEach((img) =>
+      img.setAttribute(
+        "src",
+        e.target.getAttribute("src").slice(0, 23) + ".jpg"
+      )
+    );
   });
 });
+// img_slider.addEventListener("click", () => {
+//   var html = document.getElementsByTagName("html")[0];
+//   document.body.style.background = "red";
+// });
