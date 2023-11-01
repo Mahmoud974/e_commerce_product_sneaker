@@ -171,7 +171,3 @@ little_img.forEach((img) => {
     );
   });
 });
-// img_slider.addEventListener("click", () => {
-//   var html = document.getElementsByTagName("html")[0];
-//   document.body.style.background = "red";
-// });
